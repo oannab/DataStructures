@@ -22,3 +22,15 @@
 - if tails does not exist/None, no action - O(1)
 - if tail is the only node in the list, current head and tail is updated with this node - O(1)
 - if multiple nodes, tail is udated, and the removed node is detached from the linked list - constant time O(1)
+
+
+*Space Complexity*
+- the complexity is given by the capacity a cache can hold
+- the cache capacity is fixed, created with the instance of cache, predefined at the beginning. This determines the max elements that can be stored. 
+- The space in the cache is used by the linked list nodes and dictionary and remains constant once the cached is initializes. 
+
+- The Doubly Linked List Nodes - each node takes a constant amount of memory to store pointers & values - O(1). The memory used by nodes is constant regardless of cache capacity. Therefore, if cache is full, the space complexity of nodes is proportional and constant to the size of cache / its capacity O(capacity). T
+
+- The Dictionary Cache Space - is used to store the key/value pairs, keys correspond to the cache keys and values correspond to the cache nodes.  Each key/value use constant O(1) amount of memory - therefore it is dependant of the cache size and the actual size a node (the doubly linked list nodes) will take based on the class attribute 
+
+- Total SPace complexity is constant O(1) - both the linked list nodes and the dictionary have constant space complexity O(1) in terms of memory required per node/element. Once the cache is initialized, its capacity doesn't change. It is not dependent on input data or number of elements, it is only determined by the maximum capacity of the cache.
